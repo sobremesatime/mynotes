@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "cfaf3b765881adcc",
+        "id": "e4b4441b01fbe4e7",
         "type": "tabs",
         "children": [
           {
-            "id": "5d3ffc41073d7682",
+            "id": "20c6551a8f8fc5ba",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -189,6 +189,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "copilot:Open Copilot Agent Chat": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -199,7 +200,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5d3ffc41073d7682",
+  "active": "20c6551a8f8fc5ba",
   "lastOpenFiles": [
     "README.md",
     "中间件/docker.md",
