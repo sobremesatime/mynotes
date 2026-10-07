@@ -1,14 +1,10 @@
 # ---- Obsidian ----
-# 工作区布局（每个人本地不同，不需要同步）
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
-.obsidian/cache
+# 配置目录仅保留在本地，不同步
+.obsidian/
 .trash/
 
-# 插件运行产生的本地缓存 / 配置
+# 插件运行产生的本地缓存
 .copilot/
-.obsidian/plugins/*/data.json
-.obsidian/plugins/obsidian-git/obsidian_askpass.sh
 
 # ---- 操作系统（Windows）----
 Thumbs.db
