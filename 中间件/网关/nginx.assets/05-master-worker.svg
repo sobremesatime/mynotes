@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" width="960" height="470" font-family="'Microsoft YaHei','PingFang SC','Hiragino Sans GB','Segoe UI',sans-serif">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6fbf8"/><stop offset="1" stop-color="#e9f4ee"/>
+    </linearGradient>
+    <linearGradient id="ng5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00a94f"/><stop offset="1" stop-color="#00753b"/>
+    </linearGradient>
+    <filter id="sh5" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0b3d20" flood-opacity="0.18"/>
+    </filter>
+    <marker id="ar5" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#4b7a63"/>
+    </marker>
+    <marker id="ar5d" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#9db8a9"/>
+    </marker>
+  </defs>
+  <rect width="960" height="470" rx="18" fill="url(#bg5)"/>
+  <text x="480" y="44" text-anchor="middle" font-size="23" font-weight="700" fill="#12331f">单 Master 多 Worker 进程架构</text>
+  <text x="480" y="72" text-anchor="middle" font-size="14" fill="#4a6b57">Master 只管调度不处理请求；Worker 数量 = CPU 核数，单线程处理、互不影响</text>
+
+  <rect x="340" y="92" width="280" height="86" rx="14" fill="url(#ng5)" filter="url(#sh5)"/>
+  <text x="480" y="126" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">Master 进程（不处理请求）</text>
+  <text x="480" y="152" text-anchor="middle" font-size="12.5" fill="#d7f0e0">读配置 · 调度启停 · 滚动升级</text>
+
+  <line x1="480" y1="178" x2="480" y2="212" stroke="#9db8a9" stroke-width="2" stroke-dasharray="5 4"/>
+  <line x1="180" y1="212" x2="780" y2="212" stroke="#9db8a9" stroke-width="2" stroke-dasharray="5 4"/>
+  <line x1="180" y1="212" x2="180" y2="248" stroke="#9db8a9" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ar5d)"/>
+  <line x1="480" y1="212" x2="480" y2="248" stroke="#9db8a9" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ar5d)"/>
+  <line x1="780" y1="212" x2="780" y2="248" stroke="#9db8a9" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ar5d)"/>
+  <text x="640" y="205" font-size="12" fill="#7a9a88">管理 / 启停 / 下发配置</text>
+
+  <rect x="80" y="252" width="200" height="118" rx="13" fill="#ffffff" stroke="#cfe3d6" filter="url(#sh5)"/>
+  <text x="180" y="288" text-anchor="middle" font-size="15" font-weight="700" fill="#2c5a41">Worker 1</text>
+  <text x="180" y="314" text-anchor="middle" font-size="12.5" fill="#5c7d6a">单线程处理请求</text>
+  <text x="180" y="338" text-anchor="middle" font-size="12.5" fill="#5c7d6a">无并发竞争</text>
+
+  <rect x="380" y="252" width="200" height="118" rx="13" fill="#ffffff" stroke="#cfe3d6" filter="url(#sh5)"/>
+  <text x="480" y="288" text-anchor="middle" font-size="15" font-weight="700" fill="#2c5a41">Worker 2</text>
+  <text x="480" y="314" text-anchor="middle" font-size="12.5" fill="#5c7d6a">单线程处理请求</text>
+  <text x="480" y="338" text-anchor="middle" font-size="12.5" fill="#5c7d6a">进程独立隔离</text>
+
+  <rect x="680" y="252" width="200" height="118" rx="13" fill="#ffffff" stroke="#cfe3d6" filter="url(#sh5)"/>
+  <text x="780" y="288" text-anchor="middle" font-size="15" font-weight="700" fill="#2c5a41">Worker 3</text>
+  <text x="780" y="314" text-anchor="middle" font-size="12.5" fill="#5c7d6a">单线程处理请求</text>
+  <text x="780" y="338" text-anchor="middle" font-size="12.5" fill="#5c7d6a">单进程宕机不影响整体</text>
+
+  <rect x="80" y="398" width="800" height="46" rx="12" fill="#eef6f0" stroke="#cfe3d6"/>
+  <text x="480" y="427" text-anchor="middle" font-size="13.5" fill="#2c5a41">所有 Worker 共同监听同一 IP:端口 → 客户端连接由操作系统随机分发给各 Worker</text>
+</svg>

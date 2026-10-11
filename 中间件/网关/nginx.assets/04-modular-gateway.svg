@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" width="960" height="440" font-family="'Microsoft YaHei','PingFang SC','Hiragino Sans GB','Segoe UI',sans-serif">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6fbf8"/><stop offset="1" stop-color="#e9f4ee"/>
+    </linearGradient>
+    <linearGradient id="ng4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00a94f"/><stop offset="1" stop-color="#00753b"/>
+    </linearGradient>
+    <filter id="sh4" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0b3d20" flood-opacity="0.18"/>
+    </filter>
+    <marker id="ar4" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#4b7a63"/>
+    </marker>
+  </defs>
+  <rect width="960" height="440" rx="18" fill="url(#bg4)"/>
+  <text x="480" y="44" text-anchor="middle" font-size="23" font-weight="700" fill="#12331f">模块化网关架构：内置能力 + 自定义扩展</text>
+  <text x="480" y="72" text-anchor="middle" font-size="14" fill="#4a6b57">所有流量必经 Nginx，通用能力开箱即用，特殊协议/功能可扩展</text>
+
+  <text x="165" y="112" text-anchor="middle" font-size="14" font-weight="700" fill="#2c5a41">内置通用能力</text>
+  <rect x="40" y="126" width="250" height="48" rx="11" fill="#ffffff" stroke="#cfe3d6" filter="url(#sh4)"/>
+  <text x="165" y="156" text-anchor="middle" font-size="14" fill="#2c5a41">日志记录 · 链路排查统计</text>
+  <rect x="40" y="184" width="250" height="48" rx="11" fill="#ffffff" stroke="#cfe3d6" filter="url(#sh4)"/>
+  <text x="165" y="214" text-anchor="middle" font-size="14" fill="#2c5a41">内容压缩 · 降低带宽</text>
+  <rect x="40" y="242" width="250" height="48" rx="11" fill="#ffffff" stroke="#cfe3d6" filter="url(#sh4)"/>
+  <text x="165" y="272" text-anchor="middle" font-size="14" fill="#2c5a41">IP 管控 · 限流 / 封禁</text>
+  <rect x="40" y="300" width="250" height="48" rx="11" fill="#ffffff" stroke="#cfe3d6" filter="url(#sh4)"/>
+  <text x="165" y="330" text-anchor="middle" font-size="14" fill="#2c5a41">内容修改 · 改请求/响应</text>
+
+  <rect x="360" y="150" width="240" height="170" rx="16" fill="url(#ng4)" filter="url(#sh4)"/>
+  <text x="480" y="205" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">Nginx 网关核心</text>
+  <text x="480" y="236" text-anchor="middle" font-size="13" fill="#d7f0e0">模块化 · 配置化</text>
+  <text x="480" y="262" text-anchor="middle" font-size="13" fill="#d7f0e0">统一流量入口</text>
+  <text x="480" y="288" text-anchor="middle" font-size="13" fill="#d7f0e0">nginx.conf 声明式管理</text>
+
+  <text x="795" y="112" text-anchor="middle" font-size="14" font-weight="700" fill="#2c5a41">自定义扩展能力</text>
+  <rect x="670" y="126" width="250" height="76" rx="11" fill="#ffffff" stroke="#cfe3d6" filter="url(#sh4)"/>
+  <text x="795" y="156" text-anchor="middle" font-size="14" font-weight="700" fill="#2c5a41">协议扩展</text>
+  <text x="795" y="182" text-anchor="middle" font-size="12.5" fill="#5c7d6a">TCP / UDP / HTTP2 / WS</text>
+  <rect x="670" y="216" width="250" height="76" rx="11" fill="#ffffff" stroke="#cfe3d6" filter="url(#sh4)"/>
+  <text x="795" y="246" text-anchor="middle" font-size="14" font-weight="700" fill="#2c5a41">功能扩展</text>
+  <text x="795" y="272" text-anchor="middle" font-size="12.5" fill="#5c7d6a">自研业务模块</text>
+
+  <path d="M292,150 C330,150 336,205 356,205" fill="none" stroke="#4b7a63" stroke-width="2" marker-end="url(#ar4)"/>
+  <path d="M292,208 C330,208 336,225 356,225" fill="none" stroke="#4b7a63" stroke-width="2" marker-end="url(#ar4)"/>
+  <path d="M292,266 C330,266 336,245 356,245" fill="none" stroke="#4b7a63" stroke-width="2" marker-end="url(#ar4)"/>
+  <path d="M292,324 C330,324 336,265 356,265" fill="none" stroke="#4b7a63" stroke-width="2" marker-end="url(#ar4)"/>
+  <path d="M600,205 C634,205 638,164 666,164" fill="none" stroke="#4b7a63" stroke-width="2" marker-end="url(#ar4)"/>
+  <path d="M600,245 C634,245 638,254 666,254" fill="none" stroke="#4b7a63" stroke-width="2" marker-end="url(#ar4)"/>
+
+  <text x="480" y="382" text-anchor="middle" font-size="13.5" fill="#2c5a41">无需改源码，改配置即可启用 / 关闭 / 调整功能 → 适配快速迭代</text>
+  <text x="480" y="410" text-anchor="middle" font-size="12.5" fill="#5c7d6a">注：配置文件标准写法为 nginx.conf</text>
+</svg>

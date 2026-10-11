@@ -18,6 +18,8 @@ Docker 是一种软件部署技术，利用容器化技术为应用程序封装�
 
 - Docker Hub：Docker 的官方公共仓库，存储了大量用户分享的 Docker 镜像。
 
+![image-20261008202359219](Docker.assets/image-20261008202359219.png)
+
 ## 二、Docker 安装
 
 Docker 是基于 Linux 的容器化技术。在 Windows 和 Mac 电脑上，Docker 通过虚拟化一个 Linux 子系统来运行。

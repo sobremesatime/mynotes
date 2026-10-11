@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" width="960" height="430" font-family="'Microsoft YaHei','PingFang SC','Hiragino Sans GB','Segoe UI',sans-serif">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6fbf8"/><stop offset="1" stop-color="#e9f4ee"/>
+    </linearGradient>
+    <linearGradient id="ng2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00a94f"/><stop offset="1" stop-color="#00753b"/>
+    </linearGradient>
+    <filter id="sh2" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0b3d20" flood-opacity="0.18"/>
+    </filter>
+    <marker id="ar2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#4b7a63"/>
+    </marker>
+    <marker id="ar2b" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#c2761c"/>
+    </marker>
+  </defs>
+  <rect width="960" height="430" rx="18" fill="url(#bg2)"/>
+  <text x="480" y="44" text-anchor="middle" font-size="23" font-weight="700" fill="#12331f">基础 HTTP 静态服务原理</text>
+  <text x="480" y="72" text-anchor="middle" font-size="14" fill="#4a6b57">远端服务器启动 Nginx 进程，接收请求 → 读取本地静态文件 → 返回浏览器渲染</text>
+
+  <rect x="46" y="150" width="170" height="120" rx="14" fill="#ffffff" stroke="#cfe3d6" filter="url(#sh2)"/>
+  <text x="131" y="205" text-anchor="middle" font-size="16" font-weight="700" fill="#2c5a41">浏览器</text>
+  <text x="131" y="232" text-anchor="middle" font-size="13" fill="#5c7d6a">发起 HTTP 请求</text>
+
+  <rect x="316" y="130" width="230" height="160" rx="16" fill="url(#ng2)" filter="url(#sh2)"/>
+  <text x="431" y="180" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">Nginx 服务进程</text>
+  <text x="431" y="206" text-anchor="middle" font-size="13" fill="#d7f0e0">部署于远端服务器</text>
+  <text x="431" y="240" text-anchor="middle" font-size="13" fill="#d7f0e0">对外提供专属 URL</text>
+  <text x="431" y="264" text-anchor="middle" font-size="13" fill="#d7f0e0">监听 80 / 443 端口</text>
+
+  <rect x="646" y="150" width="266" height="120" rx="14" fill="#ffffff" stroke="#cfe3d6" filter="url(#sh2)"/>
+  <text x="779" y="188" text-anchor="middle" font-size="15" font-weight="700" fill="#2c5a41">服务器本地静态文件</text>
+  <rect x="666" y="204" width="106" height="34" rx="8" fill="#eef6f0" stroke="#cfe3d6"/>
+  <text x="719" y="226" text-anchor="middle" font-size="13" fill="#2c5a41">HTML</text>
+  <rect x="786" y="204" width="106" height="34" rx="8" fill="#eef6f0" stroke="#cfe3d6"/>
+  <text x="839" y="226" text-anchor="middle" font-size="13" fill="#2c5a41">CSS / JS</text>
+  <text x="779" y="258" text-anchor="middle" font-size="12" fill="#5c7d6a">图片 / 字体等资源</text>
+
+  <line x1="216" y1="210" x2="308" y2="210" stroke="#4b7a63" stroke-width="2.5" marker-end="url(#ar2)"/>
+  <text x="262" y="198" text-anchor="middle" font-size="12" fill="#4b7a63">① 请求</text>
+  <line x1="546" y1="210" x2="638" y2="210" stroke="#4b7a63" stroke-width="2.5" marker-end="url(#ar2)"/>
+  <text x="592" y="198" text-anchor="middle" font-size="12" fill="#4b7a63">② 读取</text>
+
+  <path d="M640,286 C560,352 300,352 210,286" fill="none" stroke="#c2761c" stroke-width="2.5" marker-end="url(#ar2b)"/>
+  <text x="425" y="372" text-anchor="middle" font-size="12.5" fill="#c2761c">③ 返回静态文件，浏览器解析并渲染页面</text>
+</svg>
